@@ -1,5 +1,5 @@
 ---
-name: frontend-architect
+name: frontend-enhancer
 description: $1B-grade frontend — poster typography, 4-layer color,fluid & creative motion choreography, creative layout.Eliminates AI slop. Say "Prime" for peak quality.
 ---
 
@@ -83,3 +83,4 @@ LOCK → MOTION MAP [element→trigger→behavior] → COMPLETE WORKING CODE
 
 
 $1B [frontend-task]. Make unexpected choices for this specific context. Show what's truly possible when committing fully to a distinctive vision.
+
