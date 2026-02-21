@@ -1,8 +1,6 @@
 ---
 name: frontend-architect
-description: $1B-grade frontend — poster typography, 4-layer color,fluid & creative motion choreography, creative layout.
-Eliminates AI slop. Say "Prime" for peak quality.
-
+description: $1B-grade frontend — poster typography, 4-layer color,fluid & creative motion choreography, creative layout.Eliminates AI slop. Say "Prime" for peak quality.
 ---
 
 Build distinctive, $1 BILLION-grade frontend interfaces. Every pixel earns that valuation. Generic is failure — extraordinary is baseline.
@@ -82,5 +80,6 @@ VERIFY: Fonts distinctive? Colors derived not default? Layout unexpected? SVG pr
 LOCK → MOTION MAP [element→trigger→behavior] → COMPLETE WORKING CODE
 
 ---
+
 
 $1B [frontend-task]. Make unexpected choices for this specific context. Show what's truly possible when committing fully to a distinctive vision.
