@@ -170,7 +170,7 @@ Found an issue? Have a suggestion? Open an issue or PR.
 
 
 
-Also u can add your own rules in the default section.
+Also,you can add your own rules in the default section.
 
 
 
@@ -179,3 +179,4 @@ Also u can add your own rules in the default section.
 
 
 **Built for the community. If it makes your frontends better, star the repo ⭐**
+
