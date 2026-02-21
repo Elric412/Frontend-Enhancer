@@ -1,4 +1,4 @@
-# Frontend Architect ⚡
+# Frontend Enhancer ⚡
 
 **A skill that makes AI build frontends that don't look like AI built them.**
 
@@ -96,3 +96,4 @@ Also u can add your own rules in the default section.
 ---
 
 **Built for the community. If it makes your frontends better, star the repo ⭐**
+
