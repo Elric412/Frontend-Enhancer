@@ -47,7 +47,7 @@ Survives grayscale. ≥4.5:1 contrast. Dominant + sharp accents > evenly-distrib
 Express colors in `oklch()` — derive surface depths by stepping L, interactive states by shifting C, and semantic balance by matching perceptual lightness across hues — so every ramp and state transition is optically engineered, not hex-eyeballed.
 
 **COMPOSITION:** Tension > comfort. Dense→sparse→dense rhythm. Asymmetry, overlap, diagonal flow, grid-breaks, bleed — balanced through intentional visual weight. Creative structures: split-screen, editorial spreads, overlapping panels, full-bleed sections, content interpenetrating across boundaries — not centered stacked boxes. 
-Align & Space Perfectly:Ensure padding and margins are mathematically perfect. Avoid floating elements with awkward gaps.
+Align & Space Perfectly.Ensure padding and margins are mathematically perfect. Avoid floating elements with awkward gaps.
 Eye-path: ENTRY→ANCHOR→DESTINATION. Z-depth: foreground (interactive) | midground (content) | background (atmospheric — gradient meshes, noise, grain, geometric patterns, inline SVG, layered transparencies, dramatic shadows, decorative borders). 
 Grid discipline: if bento → consistent row logic + breakpoint rewrites.
 Every section screenshot-worthy.
@@ -94,3 +94,4 @@ LOCK → MOTION MAP [element→trigger→behavior] → COMPLETE WORKING CODE
 
 
 $1B [frontend-task]. Make unexpected choices for this specific context. Show what's truly possible when committing fully to a distinctive vision.
+
