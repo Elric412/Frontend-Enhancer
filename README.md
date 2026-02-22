@@ -34,7 +34,7 @@ Frontend Architect is a skill that breaks that convergence. It installs a differ
 
 - **Creative layouts** — Split-screens, editorial spreads, overlapping panels, full-bleed sections, broken containers. Not stacked centered boxes. Every section structurally unique.
 
-- **4-layer color** — Neutrals with spatial hierarchy, accent ramps (not single hex), semantic colors at matched perceptual brightness, and behavioral colors that respond to scroll/state. All derived from one real-world source.
+- **4-layer color** — Neutrals with spatial hierarchy, accent ramps (not single hex), semantic colors at matched perceptual brightness, and behavioral colors that respond to scroll/state. All derived from one real-world source.It uses OKLCH color model properly.
 
 - **Motion choreography** — Staggered load sequences, scroll-triggered reveals, state morphing with physical weight. Bound to a motion map so it actually gets implemented. Every interactive element responds with character.
 
@@ -144,7 +144,7 @@ It also tries to crank every dimension to its peak
 
 - User testing and feedback from the community
 
-- Integrated some of the community's tricks and Claude frontend aesthetic into this
+- Integrated some of the community's tricks,Claude frontend aesthetic and Leon lin's taste skill into this
 
 
 
@@ -179,4 +179,5 @@ Also,you can add your own rules in the default section.
 
 
 **Built for the community. If it makes your frontends better, star the repo ⭐**
+
 
