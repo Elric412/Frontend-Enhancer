@@ -75,7 +75,7 @@ Express colors in `oklch()` — derive surface depths by stepping L, interactive
 
 Align & Space Perfectly.Ensure padding and margins are mathematically perfect. Avoid floating elements with awkward gaps.
 
-Eye-path: ENTRY→ANCHOR→DESTINATION. Z-depth: foreground (interactive) | midground (content) | background (atmospheric —Eg. gradient meshes, noise, grain, geometric patterns, inline SVG, layered transparencies, dramatic shadows, decorative borders etc). 
+Eye-path: ENTRY→ANCHOR→DESTINATION. Z-depth: foreground (interactive) | midground (content) | background (atmospheric —Eg. gradient meshes, geometric patterns, inline SVG, layered transparencies, dramatic shadows, decorative borders etc). 
 
 Grid discipline: if bento → consistent row logic + breakpoint rewrites.
 
@@ -141,3 +141,4 @@ LOCK → MOTION MAP [element→trigger→behavior] → COMPLETE WORKING CODE
 ---
 
 $1B [frontend-task]. Make unexpected choices for this specific context. Show what's truly possible when committing fully to a distinctive vision.
+
