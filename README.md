@@ -1,183 +1,79 @@
-# Frontend Enhancer ⚡
+# Frontend Architect ($1B-Grade UI Engine)
+*Made by me and @Elric412
 
+This skill constitutes an advanced system prompt or instruction protocol designed to elevate AI-generated frontend design far beyond standard UI patterns. It establishes an uncompromising standard for aesthetics, layout, interaction, and emotional resonance. The output is aimed at being on par with Awwwards Site of the Year (SOTY) quality.
 
+## Core Philosophy: "No AI Slop"
+The foundational premise of this skill is **distinctiveness**. It vehemently rejects anything generic, predictable, or templated. 
 
-**A skill that makes AI build frontends that don't look like AI built them.**
+If 100 AIs would naturally converge on a design, that design is explicitly rejected. Output must emulate the high-end craft seen in elite agencies and leading global tech brands like Apple or Stripe, ensuring every pixel feels like it was designed with a specific human context and psychological purpose.
 
+## Key Rules & Directives
+
+### 1. The Anti-Slop Mandate
+- **Banned:** Overused fonts (Inter, Roboto), cliched colors (purple/blue on white), 3-card+CTA layouts, standard linear easing, flat backgrounds, and generic placeholder text (Lorem Ipsum).
+- **Mandatory:** Unexpected layouts, distinctive typefaces, atmospheric depth, and custom cubic-bezier animations.
+
+### 2. Complete, Production-Ready Excellence
+- All code must be delivered in **ONE continuous, complete block**.
+- Placeholders and "add later" statements are forbidden. 
+- Fully handle all states: Hover, Focus, Active, Disabled, Loading, Error, Empty.
+- Semantic HTML and accessibility (keyboard navigation, high contrast ≥4.5:1) are baseline requirements.
+
+### 3. Design System Pillars
+* **Typography:** Display fonts must carry weight and presence (extended, bold). Body text must pair logically (e.g., contrasting sans and serif). Text is treated as visual architectural material, utilizing poster-scale layouts.
+* **Color (4-Layer CSS Vars):** Palettes are derived directly from real-world inspirations (materials, nature, eras), ignoring abstract selections. Features an evolving depth hierarchy across 4 layers (Neutral depths, Accent behavior, Semantic brightness, Behavioral interaction).
+* **Composition:** Prioritizes tension over comfort. Relies on staggered rhythms, asymmetry, overlapping panels, and strong eye-paths (Entry -> Anchor -> Destination).
+* **Motion:** Animations are critical, functional narrative tools—not afterthoughts. Focus on fluid load choreography, scroll triggers, custom easing, and physical-simulated weight on every interactive element.
+* **Responsiveness:** Code must be mobile-first with zero overflow or awkward text truncation, using fluid clamp() and unique structural redesigns per breakpoint, not just scaling.
+
+## Execution Framework: LOCK & Output
+
+Before code is ever generated, the system creates a **LOCK**—a binding structural and thematic contract:
+1. **Context:** Target audience and tone.
+2. **Aesthetic:** A defined visual direction (Brutalist, Luxury, Minimal, etc).
+3. **Fusion:** A blend of ≥2 non-web domains (Architecture, Fashion, Cinema, etc).
+4. **Palette & Type:** Specific real-world colors and display font combinations.
+5. **Signature:** A recurring motif, and one central unforgettable moment.
+6. **Subversion:** Taking an expected pattern and deliberately twisting it.
+
+The final output sequence is always:
+**`LOCK`** → **`MOTION MAP`** → **`COMPLETE WORKING CODE`**
+
+## ⚡ PRIME MODE
+The user can append the word **"Prime"** to their input to activate maximum output capability. This cranks all variables to absolute maximums:
+* **Typography:** Type as literal architecture.
+* **Color & Motion:** Cinematic choreography, behavioral reactive colors, 5+ signature motion pieces.
+* **Innovation:** Advanced uses of generative SVG, shader-like CSS styling, and optical layout perfection.
+
+## 🏢 SF MODE (Systematic Futurism)
+An internal operational mode for **Tech UI Specialization** (SaaS, DevTools, Dashboards, Fintech). When activated (automatically or explicitly via `SF` or `SF Prime`), creativity transforms into **disciplined precision**. 
+
+**Core Paradigm Shift:** 
+* Spectacle → Trust
+* Expression → Clarity
+* Surprise → Comprehension
+* Art Direction → Product Engineering
+
+### SF Mode Overrides
+* **Typography:** Neutrality preferred if it increases engineering clarity.
+* **Color:** Accent usage is capped at ≤10% of the surface area. Guides action rather than dominating.
+* **Composition:** Grid discipline over tension. Alignment and whitespace communicate system maturity.
+* **Motion:** Strictly functional feedback (150–350ms duration). No cinematic choreography.
+* **Innovation:** Expected patterns are improved upon; they are not shocked. Innovation must reduce cognitive load.
+
+### SF LOCK Additions
+* **Trust Axis:** Precision / Intelligence / Velocity / Security
+* **System Density:** Focused / Balanced / Data-Heavy
+* **Usage Context:** Daily Tool / Decision Dashboard / Onboarding / Analytics
+
+## Verification Checklist (Multi-Lens Pass)
+Every output undergoes an intensive verification across:
+- **Psychological:** Cognitive load, layout delight.
+- **Technical:** 60fps, GPU composited.
+- **Accessible:** Screen reader & keyboard friendly.
+- **Commercial:** Builds trust and converts.
 
 
 ---
-
-
-
-## The Problem
-
-
-
-Every AI builds the same frontend. Same fonts (Inter, Roboto). Same colors (purple-blue gradient). Same layout (hero → 3 cards → CTA → footer). Same hover effects (color shift). Same flat backgrounds.
-
-
-
-The community calls it **AI slop**. It happens because LLMs converge on the most probable output from their training data — and the most probable frontend is a generic SaaS landing page.
-
-
-
-## What This Does
-
-
-
-Frontend Architect is a skill that breaks that convergence. It installs a different design system into the model's reasoning:
-
-
-
-- **Text as design material** — Oversized, cropped, overlapping, outlined, decorative. Not just readable content but visual architecture. Poster-grade hero typography with mixed treatments (outline + fill, caps + italic, cropping, bleeding).
-
-- **Creative layouts** — Split-screens, editorial spreads, overlapping panels, full-bleed sections, broken containers. Not stacked centered boxes. Every section structurally unique.
-
-- **4-layer color** — Neutrals with spatial hierarchy, accent ramps (not single hex), semantic colors at matched perceptual brightness, and behavioral colors that respond to scroll/state. All derived from one real-world source.It uses OKLCH color model properly.
-
-- **Motion choreography** — Staggered load sequences, scroll-triggered reveals, state morphing with physical weight. Bound to a motion map so it actually gets implemented. Every interactive element responds with character.
-
-- **Custom SVG** — Geometric patterns, abstract shapes, decorative accents woven throughout as visual texture.
-
-- **Domain fusion** — Every design fuses 2+ non-web domains (architecture, cinema, fashion, editorial, nature) making generic output structurally impossible.
-
-- **Anti-slop litmus** — "Would 100 AIs converge on this? Yes → reject, different angle."
-
-
-
-It also includes a completeness system that prevents the model from wrapping up early or leaving TODOs, and a planning phase (LOCK) that forces the model to commit to a specific aesthetic direction before writing any code.
-
-
-
-## Quick Start
-
-
-
-1. Ask for any frontend task
-
-2. Say **"Prime"** in your prompt for maximum quality
-
-
-
-That's it. No setup, no dependencies, no config.
-
-
-
-### Works With
-
-- **Claude** 
-
-- **ChatGPT** 
-
-- **Gemini** 
-
-- **Cursor** 
-
-- **Windsurf / Cline / Aider** 
-
-- Any tool that accepts system-level instructions
-
-
-
-## Usage
-
-
-
-### Default Mode
-
-```
-
-Build a landing page for a creative agency that specializes in brand identity.
-
-```
-
-
-
-### Prime Mode (Recommended)
-
-```
-
-Prime Mode: Build a landing page for a creative agency that specializes in brand identity.
-
-```
-
-
-
-I created Prime Mode because LLMs tend to take the path of least resistance,they'll pick the first decent font, the first reasonable color, the first layout that works, and call it done. Prime forces the model to slow down and actually design.
-
-
-
-When Prime is active, the model analyzes every decision through multiple lenses. It outputs up to 8 key design decisions with rationale before writing any code, so it's committing to intentional choices instead of defaulting to whatever comes first.
-
-
-
-It also tries to crank every dimension to its peak
-
-
-
-## What's Inside
-
-| Section | What It Does |
-|---------|-------------|
-| **Anti-Slop** | Bans generic fonts, cliched colors, and cookie-cutter layouts. Anti-convergence across outputs. 100-AI litmus test. |
-| **Completeness** | Every function fully defined, all states handled, no TODOs, write to output limit. "Add later" is banned — add it now. |
-| **Defaults** | Rules enforced on every output: text-as-graphic, creative layouts, micro-interactions, innovative UI/UX patterns, SVG, realistic content, and accessibility. |
-| **Typography** | Extended/wide display fonts, intentional font geometry, smart pairing across contrast axes (Geometric + Humanist, Extended + Condensed), 4:1+ scale jumps, poster-grade hero composition. |
-| **Color** | 4-layer system — L1 Neutral (spatial hierarchy via surface depths), L2 Accent (interactive ramp), L3 Semantic (perceptually matched), L4 Behavioral (responds to scroll/state). Derived from one real-world source. |
-| **Composition** | Tension-based layouts, z-depth planes, creative structures (split-screen, editorial, overlapping panels), balanced visual weight. Bento grid discipline when applicable. |
-| **Motion** | Scan the entire interface for motion opportunities, then implement all of them. Custom cubic-bezier per project, staggered load choreography, scroll-triggered sequences, state morphing. Physical weight on every interaction. |
-| **LOCK** | Mandatory planning: context, aesthetic direction, domain fusion, palette from real-world source, typography strategy, signature motif, unforgettable moment, and subversion of expectations. |
-| **Prime** | Maximum quality trigger: intensifies every dimension, multi-lens analysis (psychological, technical, accessible, commercial, craft), key decisions with rationale. |
-
-## How It Was Built
-
-
-
-130+ iterations of the V1 skill using role reversal method. Then a month of V2 development including:
-
-
-
-- Real-world comparisons against Anthropic's official frontend skill.
-
-- Architectural reviews from multiple AI models
-
-- User testing and feedback from the community
-
-- Integrated some of the community's tricks,Claude frontend aesthetic and Leon lin's taste skill into this
-
-
-
-## Tips
-
-
-
-- **Always use Prime** for important projects. It's the difference between "good" and "screenshot-worthy."
-
-- **Give context.** "Landing page for a cybersecurity startup targeting enterprise CTOs" produces way better results than "landing page for a startup."
-
-- **Let it plan.** The LOCK output isn't wasted tokens — it's what makes the design coherent.
-
-- **Trust the fusion.** "Architecture + cinema" or "fashion + industrial" sounds weird but produces genuinely original designs.
-
-
-
-## Contributing
-
-
-
-Found an issue? Have a suggestion? Open an issue or PR.
-
-
-
-Also,you can add your own rules in the default section.
-
-
-
----
-
-
-
-**Built for the community. If it makes your frontends better, star the repo ⭐**
-
-
+*Created per user request analyzing the custom `SKIIL.MD` framework.*
