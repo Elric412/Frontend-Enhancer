@@ -1,5 +1,5 @@
 # Frontend Architect ($1B-Grade UI Engine)
-*Made by me and @Elric412
+Made by me and https://github.com/shoryabansalgithub
 
 This skill constitutes an advanced system prompt or instruction protocol designed to elevate AI-generated frontend design far beyond standard UI patterns. It establishes an uncompromising standard for aesthetics, layout, interaction, and emotional resonance. The output is aimed at being on par with Awwwards Site of the Year (SOTY) quality.
 
@@ -77,3 +77,4 @@ Every output undergoes an intensive verification across:
 
 ---
 *Created per user request analyzing the custom `SKIIL.MD` framework.*
+
