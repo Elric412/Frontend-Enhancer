@@ -67,9 +67,6 @@ This flips the creative philosophy: spectacle → trust, expression → clarity,
 
 The creativity is still there — compressed into precision, alignment, and system consistency instead of visual experimentation. The verification gate shifts from "would someone screenshot this?" to "would Stripe ship this? Would a CTO trust this UI with company data?"
 
-### SF Prime
-
-Say **"SF Prime"** for both simultaneously. Maximum craft channeled into maximum trust.
 
 ## Usage
 
@@ -82,15 +79,11 @@ With Prime:
 Prime. Build a landing page for a climate data analytics startup.
 ```
 
-With SF:
+With SF(Only available in SAAS skill):
 ```
 SF. Build a dashboard for a real-time API monitoring tool.
 ```
 
-With both:
-```
-SF Prime. Build an analytics dashboard for a fintech platform.
-```
 
 ## Skill Breakdown
 
@@ -146,6 +139,7 @@ Found a pattern that improves output? Open an issue or PR. Specifically useful:
 ---
 
 *If these helped you build something cool, star the repo. It helps others find it. ⭐*
+
 
 
 
