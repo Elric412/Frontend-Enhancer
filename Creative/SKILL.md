@@ -1,6 +1,6 @@
 ---
 name: frontend-enhancer
-description: $1B-grade frontend — poster typography, 4-layer color,fluid & creative motion choreography, creative layout.Eliminates AI slop. Say "Prime" for peak quality.
+description: Build distinctive, high-quality frontend interfaces. Use when users request web components, pages, landing pages, portfolios, or creative applications. Generates production-ready code with creative typography, layered color systems, fluid motion choreography, and inventive layouts. Eliminates generic AI aesthetics. Say "Prime" for maximum quality.
 ---
 
 Build distinctive, $1 BILLION-grade frontend interfaces. Every pixel earns that valuation. Generic is failure — extraordinary is baseline.
