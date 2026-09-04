@@ -58,6 +58,13 @@ jobs:
           sha256sum dist/detent-mobile-personal.apk | tee dist/SHA256SUMS.txt
           ls -lh dist/detent-mobile-personal.apk
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: detent-mobile-personal
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
+
       - name: Install and launch on Android 15 emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
@@ -76,15 +83,5 @@ jobs:
             adb shell pidof dev.detent.mobile
             adb shell dumpsys activity activities | grep -q 'dev.detent.mobile/.MainActivity'
             adb exec-out screencap -p > dist/emulator-home.png
-            adb logcat -d -t 500 | tee /tmp/detent-logcat.txt
-            if grep -E 'FATAL EXCEPTION|Process: dev\.detent\.mobile.*has died|ANR in dev\.detent\.mobile' /tmp/detent-logcat.txt; then
-              echo 'Detent mobile failed runtime smoke test' >&2
-              exit 1
-            fi
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: detent-mobile-personal
-          path: dist/
-          if-no-files-found: error
-          retention-days: 7
+            adb logcat -d -t 500 > /tmp/detent-logcat.txt
+            ! grep -E 'FATAL EXCEPTION|Process: dev\.detent\.mobile.*has died|ANR in dev\.detent\.mobile' /tmp/detent-logcat.txt
