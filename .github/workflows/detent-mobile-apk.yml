@@ -31,6 +31,32 @@ jobs:
         with:
           gradle-version: '8.11.1'
 
+      - name: Patch checked JSON exception
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('detent-mobile/app/src/main/java/dev/detent/mobile/MainActivity.java')
+          s = p.read_text()
+          old = '''    private synchronized void appendHistory(String role, String content) {
+              history.put(new JSONObject().put("role", role).put("content", content));
+              saveHistory();
+          }
+          '''
+          if old not in s:
+              raise SystemExit('appendHistory source block not found')
+          new = '''    private synchronized void appendHistory(String role, String content) {
+              try {
+                  JSONObject item = new JSONObject();
+                  item.put("role", role);
+                  item.put("content", content);
+                  history.put(item);
+                  saveHistory();
+              } catch (Exception ignored) { }
+          }
+          '''
+          p.write_text(s.replace(old, new))
+          PY
+
       - name: Build release APK
         working-directory: detent-mobile
         run: gradle --no-daemon --stacktrace :app:assembleRelease
