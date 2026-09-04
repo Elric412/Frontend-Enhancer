@@ -37,24 +37,17 @@ jobs:
           from pathlib import Path
           p = Path('detent-mobile/app/src/main/java/dev/detent/mobile/MainActivity.java')
           s = p.read_text()
-          old = '''    private synchronized void appendHistory(String role, String content) {
-              history.put(new JSONObject().put("role", role).put("content", content));
+          old = '        history.put(new JSONObject().put("role", role).put("content", content));\n        saveHistory();'
+          new = '''        try {
+              JSONObject item = new JSONObject();
+              item.put("role", role);
+              item.put("content", content);
+              history.put(item);
               saveHistory();
-          }
-          '''
+          } catch (Exception ignored) { }'''
           if old not in s:
-              raise SystemExit('appendHistory source block not found')
-          new = '''    private synchronized void appendHistory(String role, String content) {
-              try {
-                  JSONObject item = new JSONObject();
-                  item.put("role", role);
-                  item.put("content", content);
-                  history.put(item);
-                  saveHistory();
-              } catch (Exception ignored) { }
-          }
-          '''
-          p.write_text(s.replace(old, new))
+              raise SystemExit('appendHistory statements not found')
+          p.write_text(s.replace(old, new, 1))
           PY
 
       - name: Build release APK
