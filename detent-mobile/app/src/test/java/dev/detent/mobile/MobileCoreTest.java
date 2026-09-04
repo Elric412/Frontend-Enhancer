@@ -48,4 +48,12 @@ public class MobileCoreTest {
         assertTrue(safe.length() <= 48);
         assertFalse(safe.isEmpty());
     }
+
+    @Test
+    public void providerHistoryRejectsUiOnlyRoles() {
+        assertTrue(ProviderHistory.isSendableRole("user"));
+        assertTrue(ProviderHistory.isSendableRole("assistant"));
+        assertFalse(ProviderHistory.isSendableRole("system-note"));
+        assertFalse(ProviderHistory.isSendableRole("system"));
+    }
 }
