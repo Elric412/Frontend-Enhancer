@@ -8,6 +8,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: detent-mobile-apk-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,24 +34,6 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.11.1'
-
-      - name: Patch checked JSON exception
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          p = Path('detent-mobile/app/src/main/java/dev/detent/mobile/MainActivity.java')
-          s = p.read_text()
-          old = '        history.put(new JSONObject().put("role", role).put("content", content));\n        saveHistory();'
-          new = '''        try {
-              JSONObject item = new JSONObject();
-              item.put("role", role);
-              item.put("content", content);
-              history.put(item);
-              saveHistory();
-          } catch (Exception ignored) { }'''
-          if old in s:
-              p.write_text(s.replace(old, new, 1))
-          PY
 
       - name: Run JVM behavior tests
         working-directory: detent-mobile
@@ -86,6 +72,7 @@ jobs:
             sleep 3
             adb shell pidof dev.detent.mobile
             adb shell dumpsys activity activities | grep -q 'dev.detent.mobile/.MainActivity'
+            adb exec-out screencap -p > dist/emulator-home.png
             adb logcat -d -t 500 | tee /tmp/detent-logcat.txt
             if grep -E 'FATAL EXCEPTION|Process: dev\.detent\.mobile.*has died|ANR in dev\.detent\.mobile' /tmp/detent-logcat.txt; then
               echo 'Detent mobile failed runtime smoke test' >&2
