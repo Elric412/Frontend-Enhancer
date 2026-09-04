@@ -11,7 +11,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
 
@@ -65,6 +65,29 @@ jobs:
           ${ANDROID_HOME}/build-tools/35.0.0/aapt dump badging dist/detent-mobile-personal.apk | tee dist/apk-info.txt
           sha256sum dist/detent-mobile-personal.apk | tee dist/SHA256SUMS.txt
           ls -lh dist/detent-mobile-personal.apk
+
+      - name: Install and launch on Android 15 emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: |
+            set -euo pipefail
+            adb install -r dist/detent-mobile-personal.apk
+            adb shell am force-stop dev.detent.mobile
+            adb shell am start -W -n dev.detent.mobile/.MainActivity | tee /tmp/activity-start.txt
+            grep -q 'Status: ok' /tmp/activity-start.txt
+            sleep 3
+            adb shell pidof dev.detent.mobile
+            adb shell dumpsys activity activities | grep -q 'dev.detent.mobile/.MainActivity'
+            adb logcat -d -t 500 | tee /tmp/detent-logcat.txt
+            if grep -E 'FATAL EXCEPTION|Process: dev\.detent\.mobile.*has died|ANR in dev\.detent\.mobile' /tmp/detent-logcat.txt; then
+              echo 'Detent mobile failed runtime smoke test' >&2
+              exit 1
+            fi
 
       - uses: actions/upload-artifact@v4
         with:
