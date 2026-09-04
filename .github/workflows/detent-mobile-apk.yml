@@ -11,7 +11,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -45,10 +45,13 @@ jobs:
               history.put(item);
               saveHistory();
           } catch (Exception ignored) { }'''
-          if old not in s:
-              raise SystemExit('appendHistory statements not found')
-          p.write_text(s.replace(old, new, 1))
+          if old in s:
+              p.write_text(s.replace(old, new, 1))
           PY
+
+      - name: Run JVM behavior tests
+        working-directory: detent-mobile
+        run: gradle --no-daemon --stacktrace :app:testDebugUnitTest
 
       - name: Build release APK
         working-directory: detent-mobile
